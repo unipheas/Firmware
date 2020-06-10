@@ -370,7 +370,7 @@ int do_gyro_calibration(orb_advert_t *mavlink_log_pub)
 			float zdiff = worker_data.last_sample_0[2] - worker_data.gyro_scale[0].z_offset;
 
 			/* maximum allowable calibration error */
-			const float maxoff = math::radians(0.4f);
+			const float maxoff = math::radians(1.0f);
 
 			if (!PX4_ISFINITE(worker_data.gyro_scale[0].x_offset) ||
 			    !PX4_ISFINITE(worker_data.gyro_scale[0].y_offset) ||
